@@ -19,10 +19,10 @@ Route::get('pert5', function () {
     return view('pertemuan5');
 });
 
-Route::get('dosen', [DosenController::class, 'index']);
+Route::get('dosen', [DosenController::class, 'index2']);
 
 Route::get('biodata', [DosenController::class, 'biodata']);
-Route::get('/pegawailama/{nama}', [PegawaiController::class, 'index']);
+Route::get('/pegawailama/{nama}', [PegawaiController::class, 'index2']);
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 
@@ -32,4 +32,20 @@ Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
 //route crud
-Route::get('/pegawai', [PegawaiDBController::class, 'index']);
+Route::get('/pegawai', [PegawaiDBController::class, 'index2']);
+Route::get('/', function () {
+    return view('aksesTugas');
+});
+
+
+Route::get('/pertemuan1', function () { return view('intro'); });
+Route::get('/news', function () {
+    return view('news');
+});
+Route::get('/pertemuan3', function () {
+    return view('responsive');
+});
+Route::get('/contoh', function () { return view('contoh'); });
+Route::get('/pertemuan4', function () { return view('pertemuan4'); });
+Route::get('/pertemuan5', function () { return view('pertemuan5'); });
+Route::get('/pertemuan6', function () { return view('linktree'); });
