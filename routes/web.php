@@ -32,7 +32,7 @@ Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
 //route crud
-Route::get('/pegawai', [PegawaiDBController::class, 'index2']);
+Route::get('/pegawainama', [PegawaiDBController::class, 'index2']);
 Route::get('/', function () {
     return view('aksesTugas');
 });
@@ -49,3 +49,11 @@ Route::get('/contoh', function () { return view('contoh'); });
 Route::get('/pertemuan4', function () { return view('pertemuan4'); });
 Route::get('/pertemuan5', function () { return view('pertemuan5'); });
 Route::get('/pertemuan6', function () { return view('linktree'); });
+
+Route::get('/pegawai', [PegawaiDBController::class, 'index2']);
+Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
+Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
+Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
+Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
+Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+Route::get('/pegawai/cari',['PegawaiDBController::class, 'cari']);
