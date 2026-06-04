@@ -13,7 +13,7 @@ class PegawaiDBController extends Controller
 		$pegawai = DB::table('pegawai')->paginate(10);
 
     	        // mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('index2',['pegawai' => $pegawai]);
 
 	}
     	// method untuk menampilkan view form tambah pegawai
@@ -84,7 +84,7 @@ class PegawaiDBController extends Controller
 		->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('index2',['pegawai' => $pegawai]);
 
 	}
 }
