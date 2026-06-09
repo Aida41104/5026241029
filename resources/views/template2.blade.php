@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>5026241029 Ary Ratna Aida Safa</title>
@@ -10,39 +10,42 @@
 <body>
 
 <div class="container-fluid">
- <div class="mt-4 p-5 bg-primary text-white rounded">
-  <h1>5026241029 Ary Ratna Aida Safa</h1>
-  <p>@yield('judul halaman')</p>
+  <div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1>5026241029 Ary Ratna Aida Safa</h1>
+    <p>@yield('judul halaman')</p>
+  </div>
+
+  <!-- Navigasi Menu -->
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/pegawai">Pegawai</a>
+        </li>
+        <li class="nav-item">
+          <!-- laptop (pra EAS) -->
+          <a class="nav-link" href="/laptop">Laptop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Siswa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Latihan 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Latihan 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">EAS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Pegawai</a>
-      </li>
-     <li class="nav-item">
-        <a class="nav-link" href="#">Nama Tabel PR</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Siswa</a>
-      </li>
-            <li class="nav-item">
-        <a class="nav-link" href="#">Latihan 1</a>
-      </li>
-            <li class="nav-item">
-        <a class="nav-link" href="#">Latihan 2</a>
-      </li>
-            <li class="nav-item">
-        <a class="nav-link" href="#">EAS</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<div class="container mt-3">
+  @yield('konten')
 </div>
-  <div class="container">
-    @yield('konten')
-  </div>
 
 </body>
 </html>
