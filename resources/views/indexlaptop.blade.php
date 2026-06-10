@@ -6,7 +6,7 @@
     <p>Cari Data Laptop :</p>
     <form action="/laptop/cari" method="GET" class="mb-3">
         <input type="text" name="cari" placeholder="Cari Merk Laptop .." value="{{ old('cari') }}" class="form-control d-inline-block w-25">
-        <input type="submit" value="CARI" class="btn btn-success">
+        <input type="submit" value="CARI" class="btn btn-primary">
     </form>
 
     <table class="table table-bordered table-striped table-hover">

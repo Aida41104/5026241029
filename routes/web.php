@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LaptopController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\NilaiKuliahController;
 
 
 Route::get('/', function () {
@@ -79,3 +80,12 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+// Rute CRUD untuk tabel nilai
+Route::get('nilaikuliah', [NilaiKuliahController::class, 'index']);
+Route::get('nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah']);
+Route::post('nilaikuliah/store', [NilaiKuliahController::class, 'store']);
+Route::get('nilaikuliah/edit/{id}', [NilaiKuliahController::class, 'edit']);
+Route::post('nilaikuliah/update', [NilaiKuliahController::class, 'update']);
+Route::get('nilaikuliah/hapus/{id}', [NilaiKuliahController::class, 'hapus']);
+Route::get('/nilaikuliah/cari', [NilaiKuliahController::class, 'cari']);

@@ -20,7 +20,7 @@
     <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="/pegawai">Pegawai</a>
+          <a class="nav-link" href="/pegawai">Pegawai</a>
         </li>
         <li class="nav-item">
           <!-- laptop (pra EAS) -->
@@ -30,7 +30,7 @@
           <a class="nav-link" href="/siswa">Siswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Latihan 1</a>
+          <a class="nav-link" href="/nilaikuliah">Latihan 1</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Latihan 2</a>
