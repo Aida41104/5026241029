@@ -23,8 +23,5 @@
             </tr>
         @endforeach
     </table>
-    <div class="mt-3">  {{-- halaman--}}
-        {{ $mypegawai->links() }}
-    </div>
     </div>
 @endsection

@@ -1,5 +1,5 @@
 @extends('template2')
-@section('judul halaman', 'Data pegawai')
+@section('judul halaman', 'Kode Soal mypegawai')
 @section('konten')
     <a href="/eas/tambah" class="btn btn-primary"> Tambah Data</a>
     <br /><br />

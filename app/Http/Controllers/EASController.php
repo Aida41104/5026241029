@@ -52,12 +52,14 @@ class EASController extends Controller
         return redirect('/eas');
     }
 
-    public function view($kodepegawai)
-    {
- $mypegawai  = DB::table('mypegawai')->where('kodepegawai', $kodepegawai)->get();
+public function view($kodepegawai)
+{
+    $mypegawai = DB::table('mypegawai')
+                    ->where('kodepegawai', $kodepegawai)
+                    ->get();
 
-        return redirect('/eas/view');
-    }
+    return view('eas.view', ['mypegawai' => $mypegawai]);
+}
 
 
     }
