@@ -15,7 +15,7 @@
                         <label for="NRP" class="col-sm-2 col-form-label">NRP</label>
                         <div class="col-sm-10">
                             <input type="text" name="NRP" id="NRP" class="form-control"
-                                   required="required" maxlength="6">
+                                   required="required" maxlength="10">
                         </div>
                     </div>
 

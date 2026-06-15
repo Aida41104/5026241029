@@ -8,6 +8,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LaptopController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\EASController;
 
 
 Route::get('/', function () {
@@ -89,3 +90,12 @@ Route::get('nilaikuliah/edit/{id}', [NilaiKuliahController::class, 'edit']);
 Route::post('nilaikuliah/update', [NilaiKuliahController::class, 'update']);
 Route::get('nilaikuliah/hapus/{id}', [NilaiKuliahController::class, 'hapus']);
 Route::get('/nilaikuliah/cari', [NilaiKuliahController::class, 'cari']);
+
+// Rute CRUD untuk tabel eas
+Route::get('eas', [EASController::class, 'index']);
+Route::get('eas/tambah', [EASController::class, 'tambah']);
+Route::post('eas/store', [EASController::class, 'store']);
+Route::get('eas/edit/{kodepegawai}', [EASController::class, 'edit']);
+Route::post('eas/update', [EASController::class, 'update']);
+Route::get('eas/view/{kodepegawai}', [EASController::class, 'view']);
+Route::get('/eas/cari', [EASController::class, 'cari']);

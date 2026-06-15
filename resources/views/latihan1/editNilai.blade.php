@@ -5,15 +5,15 @@
         <a href="/nilaikuliah" class="btn btn-secondary mb-4">Kembali</a>
 
         @foreach ($nilaikuliah as $n)
-            <div class="card">
+            <div class="card">  {{-- bikkin kartu --}}
                 <div class="card-header">Form Edit Data Nilai Mahasiswa</div>
                 <div class="card-body">
-                    <form action="/nilaikuliah/update" method="post">
+                    <form action="/nilaikuliah/update" method="post"> {{--biar bisa ngambil data, dan narah ke halaman update --}}
                         {{ csrf_field() }}
 
-                        <input type="text" name="id" value="{{ $n->ID }}">
+                        <input type="text" name="id" value="{{ $n->ID }}">  {{--klo data yg diedi punya id = 5, value=5 --}}
 
-                        <div class="row mb-3">
+                        <div class="row mb-3"> {{-- bikin ga bisa diedit --}}
                             <label class="col-sm-2 col-form-label">ID</label>
                             <div class="col-sm-10">
                                 <input type="hidden" class="form-control" value="{{ $n->ID }}" disabled>
@@ -24,7 +24,7 @@
                             <label for="NRP" class="col-sm-2 col-form-label">NRP</label>
                             <div class="col-sm-10">
                                 <input type="text" name="NRP" id="NRP" class="form-control"
-                                       required="required" maxlength="6" value="{{ $n->NRP }}">
+                                       required="required" maxlength="10" value="{{ $n->NRP }}">
                             </div>
                         </div>
 

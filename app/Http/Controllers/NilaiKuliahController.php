@@ -11,7 +11,7 @@ class NilaiKuliahController extends Controller
     {
         $nilaikuliah = DB::table('nilaikuliah')->paginate(10);
 
-        return view('latihan1.index', ['nilaikuliah' => $nilaikuliah]);
+        return view('latihan1.index', ['nilaikuliah' => $nilaikuliah]); //buka file index di latihan1, data dari phpmyadmin dipindah ke $ terus dipindah ke index.blade
     }
 
     public function tambah()
@@ -19,20 +19,20 @@ class NilaiKuliahController extends Controller
         return view('latihan1.tambahNilai');
     }
 
-    public function store(Request $request)
+    public function store(Request $request) //simpan data, data masuk ke $request
     {
         DB::table('nilaikuliah')->insert([
-            'NRP' => $request->NRP,
+            'NRP' => $request->NRP, //Kolom NRP isi dari input NRP
             'NilaiAngka' => $request->NilaiAngka,
             'SKS' => $request->SKS
         ]);
 
-        return redirect('/nilaikuliah');
+        return redirect('/nilaikuliah'); //pindah halaman ke /nilaikuliah
     }
 
     public function edit($id)
     {
-        $nilaikuliah  = DB::table('nilaikuliah')->where('ID', $id)->get();
+        $nilaikuliah  = DB::table('nilaikuliah')->where('ID', $id)->get(); //Cari data yang ID-nya sama dengan $id
 
         return view('latihan1.editNilai', ['nilaikuliah' => $nilaikuliah]);
     }
@@ -57,14 +57,14 @@ class NilaiKuliahController extends Controller
         return redirect('/nilaikuliah');
     }
 
-    public function cari(Request $request)
+    public function cari(Request $request) //Menampung data yang dikirim dari form pencarian.
     {
         $cari = $request->cari;
 
         $nilaikuliah  = DB::table('nilaikuliah')
-            ->where('NRP', 'like', "%" . $cari . "%")
-            ->paginate();
+            ->where('NRP', 'like', "%" . $cari . "%") //boleh ada karakter apa saja sebelum atau sesudah nrp
+            ->paginate(); //brp data di dalam kurung buat lanjut ke halaman selanjutnya
 
-        return view('latihan1.index', ['nilaikuliah' => $nilaikuliah]);
+        return view('latihan1.index', ['nilaikuliah' => $nilaikuliah]); //Kirim hasil pencarian ke halaman index.blade.php
     }
 }
