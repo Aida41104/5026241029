@@ -6,6 +6,15 @@
 
         @foreach ($mypegawai as $n)
             <div class="card">  {{-- bikkin kartu --}}
+                            @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                 <div class="card-header">Form Edit Data Pegawai</div>
                 <div class="card-body">
                     <form action="/eas/update" method="post"> {{--biar bisa ngambil data, dan narah ke halaman update --}}

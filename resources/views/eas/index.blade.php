@@ -24,7 +24,7 @@
                 <td class="text-center">
                     <a href="/eas/edit/{{ $l->kodepegawai }}" class="btn btn-warning btn-sm">Edit</a>
                     |
-                    <a href="/eas/view/{{ $l->kodepegawai }}" class="btn btn-danger btn-sm">View</a>
+                    <a href="/eas/view/{{ $l->kodepegawai }}" class="btn btn-primary btn-sm">View</a>
                 </td>
             </tr>
         @endforeach

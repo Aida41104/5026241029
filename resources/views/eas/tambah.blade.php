@@ -2,10 +2,20 @@
 @section('judul halaman', 'Kode Soal mypegawai')
 @section('konten')
 
+
     <div class="container mt-5">
         <a href="/eas" class="btn btn-secondary mb-4">Kembali ke Index</a>
 
         <div class="card">
+            @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
             <div class="card-header">Form Tambah Data Pegawai</div>
             <div class="card-body">
                 <form action="/eas/store" method="post">
@@ -30,14 +40,14 @@
                     <div class="row mb-3">
                         <label for="divisi" class="col-sm-2 col-form-label">Divisi</label>
                         <div class="col-sm-10">
-                            <input type="text" name="divisi" id="divisi" class="form-control"
+                            <input type="text" name="divisi" id="divisi" class="form-control">
                         </div>
 
                     </div>
                                         <div class="row mb-3">
                         <label for="departemen" class="col-sm-2 col-form-label">Departemen</label>
                         <div class="col-sm-10">
-                            <input type="text" name="departemen" id="departemen" class="form-control"
+                            <input type="text" name="departemen" id="departemen" class="form-control">
                         </div>
                     </div>
 
